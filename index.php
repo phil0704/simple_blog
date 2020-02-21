@@ -47,6 +47,7 @@ if ($result = $connection->query($sql)){
 
               </form>
               <?php
+              // check if logged in
                 if($_SESSION['logged_in']):
                  ?>
               <form action="./admin/edit.php" method="GET">
