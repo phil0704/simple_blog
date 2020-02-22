@@ -27,7 +27,7 @@ if ($result = $connection->query($sql)){
      <h1>Blog Index</h1>
 
      <?php
-    include '../menu.php';
+    include './menu.php';
 
       ?>
      <?php if ($message)  echo "<p>{$message}</p>";
@@ -50,22 +50,22 @@ if ($result = $connection->query($sql)){
               // check if logged in
                 if($_SESSION['logged_in']):
                  ?>
-              <form action="./admin/edit.php" method="GET">
+              <form action="./edit.php" method="GET">
                 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                 <input type="submit" value="Edit Post">
 
               </form>
             </form>
-            <form action="./admin/delete.php" method="POST">
+            <form action="./delete.php" method="POST">
 
               <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
               <input type="submit" value="Delete Post">
 
             </form>
-            <a href="./admin/logout.php" >logout here</a>
+            <a href="./logout.php" >logout here</a>
             <?php
           else: ?>
-            <a href="./admin/login.php">Login Page</a>
+            <a href="./login.php">Login Page</a>
 
           <?php
 

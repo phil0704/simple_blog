@@ -6,7 +6,7 @@ $password = 'simplelogin99';
 if (isset($_POST)) {
   if (($username == $_POST['username']) && ($password === $_POST['password'])) {
     $_SESSION['logged_in'] = TRUE;
-    header('Location: ../index.php');
+    header('Location: ./index.php');
     exit;
   } else {
     //assignment

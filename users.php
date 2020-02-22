@@ -1,5 +1,5 @@
 <?php
-require '../connection.php';
+require './connection.php';
 
 $message = FALSE;
 
@@ -35,7 +35,7 @@ if( isset( $_POST ) && !empty( $_POST ) ){
   <body>
     <h1>New Post</h1>
     <?php if ($message) echo "<p>{$message}</p>"; // Show a message! ?>
-    <form action="./new.php" method="POST">
+    <form action="#" method="POST">
       <label for="title">
           Title:
         <input type="text" name="title" placeholder="Enter a title...."<?php if (isset($_POST['title'])) echo 'value="' .$_POST['title'].'"'; ?>
