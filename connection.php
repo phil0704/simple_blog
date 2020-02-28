@@ -1,15 +1,17 @@
 <?php
+// Connect to DB.
 $connection = new mysqli(
-  'localhost',
-  'root',
-  'root', // MAC users put root!
-  'simple_blog'
+    'localhost',
+    'root',
+    'root', // Mac users, put root!
+    'simple-blog-project'
 );
-// handle error.
-if($connection->error) {
-  echo 'CONNECTION ERROR:' . $connection->error;
-  die;
+
+// Handle error.
+if ($connection->error) {
+    echo 'CONNECTION ERROR:' . $connection->error;
+    die;
 } else {
-  
+
 }
- ?>
+?>
